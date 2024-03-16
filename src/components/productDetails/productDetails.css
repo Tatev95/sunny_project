@@ -1,0 +1,24 @@
+.detail_wrapper{
+    background-color: rgb(129, 154, 154);
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    left: 30%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close_icon{
+    cursor: pointer;
+}
+
+.add_to_cart{ 
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.add{
+
+}

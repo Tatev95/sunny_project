@@ -1,0 +1,13 @@
+.detail_inputs {
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail_input {
+  width: 500px;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 2px 8px;
+}

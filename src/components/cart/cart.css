@@ -1,0 +1,22 @@
+.cart {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid gray;
+  position: relative;
+}
+
+input {
+  width: 50px;
+}
+
+.product_cart {
+  width: 200px;
+  background-color: lightgray;
+  margin: 20px;
+  padding: 20px;
+}

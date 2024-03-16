@@ -1,0 +1,44 @@
+.checkout {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data_input {
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.checkout_content {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: rgb(187, 187, 196);
+  width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.checkout_header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+.card_type {
+  width: 60px;
+  height: 40px;
+}

@@ -1,0 +1,37 @@
+.login_form {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  flex-wrap: wrap;
+}
+
+.input_field {
+  width: 500px;
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 2px 8px;
+}
+
+.login_button {
+  width: 100px;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: rgb(74, 117, 146);
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.account{
+  display: flex;
+  justify-content: space-between;
+  width: 295px;
+}
+
+.sign_up{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.orders {
+  cursor: pointer;
+}
+
+.filter_content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}

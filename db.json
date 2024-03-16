@@ -1,0 +1,175 @@
+{
+  "users": [
+    {
+      "firstName": "anun",
+      "lastName": "azganunn",
+      "imageUrl": "imgUrl",
+      "email": "a@mgmail.com",
+      "phone": "098445566",
+      "password": "a",
+      "id": "fc7c"
+    },
+    {
+      "id": "c337",
+      "firstName": "nor mard",
+      "lastName": "azganun",
+      "imageUrl": "aaa",
+      "email": "z@gmail.com",
+      "phone": "98111111",
+      "password": "z"
+    },
+    {
+      "id": "20f3",
+      "firstName": "Tatev",
+      "lastName": "Sukiasyan",
+      "imageUrl": "aaa",
+      "email": "t@mail.ru",
+      "phone": "093002233",
+      "password": "t"
+    },
+    {
+      "id": "8917",
+      "firstName": "new",
+      "lastName": "user",
+      "imageUrl": "https://www.google.com/search?q=image&rlz=1C1YQLS_enAM906AM906&oq=image&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiPAtIBBzkzOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#vhid=cLwX5fAoeFjuKM&vssid=l",
+      "email": "new@gmail.com",
+      "phone": "98010203",
+      "password": "new"
+    }
+  ],
+  "products": [
+    {
+      "id": "11",
+      "title": "Shoes",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 13,
+      "price": 550
+    },
+    {
+      "id": "12",
+      "title": "Shirt",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 10,
+      "price": 200
+    },
+    {
+      "id": "32",
+      "title": "Scirt",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 16,
+      "price": 200
+    },
+    {
+      "id": "14",
+      "title": "Hudy",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 8,
+      "price": 300
+    }
+  ],
+  "cart": [
+    {
+      "id": "14",
+      "title": "Hudy",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 3,
+      "price": 300,
+      "userId": "fc7c"
+    },
+    {
+      "id": "14",
+      "title": "Hudy",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 3,
+      "price": 300,
+      "userId": "fc7c"
+    },
+    {
+      "id": "14",
+      "title": "Hudy",
+      "description": "skin",
+      "imageUrl": "aaaa",
+      "count": 3,
+      "price": 300,
+      "userId": "fc7c"
+    }
+  ],
+  "orders": [
+    {
+      "id": "785b",
+      "time": "2024-03-16T10:47:27.397Z",
+      "amount": "$1650",
+      "count": 0,
+      "userId": "fc7c"
+    },
+    {
+      "id": "1be9",
+      "time": "2024-03-16T10:49:12.628Z",
+      "amount": "$300",
+      "count": 2,
+      "userId": "fc7c"
+    },
+    {
+      "id": "6a1b",
+      "time": "2024-03-16T13:11:07.265Z",
+      "amount": "$300",
+      "count": 2,
+      "userId": "8917"
+    },
+    {
+      "id": "9661",
+      "time": "2024-03-16T13:28:05.008Z",
+      "amount": "$300",
+      "count": 2,
+      "userId": "8917"
+    },
+    {
+      "id": "b4e4",
+      "time": "2024-03-16T13:31:29.159Z",
+      "amount": "$600",
+      "count": 1,
+      "userId": "8917"
+    },
+    {
+      "id": "6dd1",
+      "time": "2024-03-16T13:37:27.531Z",
+      "amount": "$1600",
+      "count": 2,
+      "userId": "8917"
+    },
+    {
+      "id": "fd1c",
+      "time": "2024-03-16T13:40:34.906Z",
+      "amount": "$1800",
+      "count": 2,
+      "userId": "8917"
+    },
+    {
+      "id": "e698",
+      "time": "2024-03-16T13:48:48.213Z",
+      "amount": "$1200",
+      "count": 6,
+      "userId": "8917"
+    },
+    {
+      "id": "d85e",
+      "time": "2024-03-16T13:50:38.655Z",
+      "amount": "$400",
+      "count": 2,
+      "userId": "8917"
+    },
+    {
+      "id": "d2e2",
+      "time": "2024-03-16T13:53:30.273Z",
+      "amount": "$200",
+      "count": 1,
+      "userId": "c337"
+    }
+  ]
+}

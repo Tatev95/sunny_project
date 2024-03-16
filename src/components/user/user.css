@@ -1,0 +1,11 @@
+.user_name {
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  cursor: pointer;
+}

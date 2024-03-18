@@ -8,6 +8,7 @@ import { Home } from "../Home";
 import { UserDetails } from "../user";
 import { Cart } from "../cart";
 import { Orders } from "../orders";
+import { AddNew } from "../addProduct";
 
 const App: FC = () => {
   return (
@@ -59,6 +60,14 @@ const App: FC = () => {
           element={
             <AuthHOC>
               <Orders />
+            </AuthHOC>
+          }
+        />
+        <Route
+          path="/add-product"
+          element={
+            <AuthHOC>
+              <AddNew />
             </AuthHOC>
           }
         />

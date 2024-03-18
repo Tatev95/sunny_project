@@ -6,6 +6,7 @@ export type UserType = {
   email: string;
   phone: string;
   password: string;
+  role: string;
 };
 
 export type NewUserType = {
@@ -15,6 +16,7 @@ export type NewUserType = {
   email: string;
   phone: string;
   password: string;
+  role: string;
 };
 
 export type UpdatedUserType = {
@@ -34,6 +36,14 @@ export type Item = {
   price: number;
 };
 
+export type AddItem = {
+  title: string;
+  description: string;
+  imageUrl: string;
+  count: number;
+  price: number;
+};
+
 export type Order = {
   id: string;
   date: string;
@@ -42,7 +52,7 @@ export type Order = {
 
 export type ProductsType = {
   id: string;
-  userId: string
+  userId: string;
   title: string;
   description: string;
   imageUrl: string;
@@ -55,11 +65,11 @@ export type OrdersType = {
   time: string;
   amount: string;
   count: number;
-  userId:string
+  userId: string;
 };
 
 export type NewOrdersType = {
-  userId: string,
+  userId: string;
   time: string;
   amount: string;
   count: number;

@@ -1,0 +1,10 @@
+.add_product {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add {
+  margin-right: 10px;
+}

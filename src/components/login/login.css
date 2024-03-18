@@ -24,14 +24,24 @@
   margin-bottom: 20px;
 }
 
-.account{
+.account {
   display: flex;
   justify-content: space-between;
   width: 295px;
 }
 
-.sign_up{
+.sign_up {
   text-decoration: underline;
   color: blue;
+  cursor: pointer;
+}
+
+.admin_checkbox {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.checkbox {
   cursor: pointer;
 }

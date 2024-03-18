@@ -13,13 +13,20 @@ import { ProductDetails } from "../productDetails";
 import { setId } from "../../store/products/products-slice";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { productCountSelector } from "../../store/cart/cart-selector";
+import { usersSelector } from "../../store/login/login-selector";
+import { loginProvider } from "../../providers/login-provider";
+import { AddProduct } from "../addProduct";
 
 export const ProductList: FC = () => {
   const dispatch = useAppDispatch();
   const products = useSelector(productSelector);
-  const productId = useSelector(productIdSelector);
   const searchtext = useSelector(searchTextSelector);
-  const count = useSelector(productCountSelector);
+
+  const users = useSelector(usersSelector);
+
+  const userId = loginProvider.getUserId() + "";
+  const currentUser = users?.find((user) => user?.id === userId);
+  console.log(currentUser, "currentuser");
 
   const [openDetails, setOpenDetails] = useState(false);
 
@@ -36,17 +43,21 @@ export const ProductList: FC = () => {
     setOpenDetails(false);
   };
 
-  const filteredProducts = products.filter(
-    (product) =>
-      product.title?.toLowerCase().includes(searchtext?.toLowerCase()) ||
-      (product.price + "").includes(searchtext)
-  );
+  const filteredProducts =
+    products && Array.isArray(products)
+      ? products.filter(
+          (product) =>
+            product.title?.toLowerCase().includes(searchtext?.toLowerCase()) ||
+            (product.price + "").includes(searchtext)
+        )
+      : [];
 
   return (
     <>
       <h3 className="products">Products List</h3>
+      {currentUser?.role === "superAdmin" && <AddProduct />}
       <div className="products_list">
-        {filteredProducts.map((product: any) => (
+        {filteredProducts?.map((product: any) => (
           <div
             key={product.id}
             className="product"
@@ -62,9 +73,7 @@ export const ProductList: FC = () => {
           </div>
         ))}
         {openDetails && (
-          <ProductDetails
-            handleCloseDetails={handleCloseDetails}
-          />
+          <ProductDetails handleCloseDetails={handleCloseDetails} />
         )}
       </div>
     </>

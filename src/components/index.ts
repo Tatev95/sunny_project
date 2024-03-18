@@ -7,3 +7,4 @@ export { ProductDetails } from "./productDetails";
 export { Cart } from "./cart";
 export { Checkout } from "./checkout";
 export { Orders } from "./orders";
+export { AddProduct, AddNew } from "./addProduct";

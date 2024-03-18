@@ -1,8 +1,8 @@
 .products_list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .product {
@@ -13,19 +13,20 @@
   border: 0.5px solid gray;
   text-align: center;
   cursor: pointer;
+  margin: 16px;
 }
 
-.products{
-    text-align: center;
+.products {
+  text-align: center;
 }
 
-.product_title{
-    margin: 3px;
+.product_title {
+  margin: 3px;
 }
 
-.count_box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 30px;
+.count_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
 }

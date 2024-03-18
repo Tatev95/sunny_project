@@ -1,9 +1,4 @@
-import React, {
-  ChangeEvent,
-  FC,
-  useEffect,
-  useState,
-} from "react";
+import React, { ChangeEvent, FC, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import { useSelector } from "react-redux";
@@ -17,20 +12,17 @@ import { setCurrentUser } from "../../store/login/login-slice";
 import { loginProvider } from "../../providers/login-provider";
 import { Validators } from "../../helpers/Validators";
 
-const {
-  isValidEmail,
-  isValidPhoneNumber,
-} = Validators;
+const { isValidEmail, isValidPhoneNumber } = Validators;
 
 export const Login: FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-
   const users = useSelector(usersSelector);
   const loading = useSelector(loadingSelector);
+
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
 
   const handChange =
     (setState: any) => (event: ChangeEvent<HTMLInputElement>) => {
@@ -47,7 +39,7 @@ export const Login: FC = () => {
     );
     dispatch(setCurrentUser(currentUser));
 
-    if (currentUser !== undefined &&  isValidEmail(login)) {
+    if (currentUser !== undefined && isValidEmail(login)) {
       loginProvider.setToken(currentUser.id);
       navigate("/home");
     } else {

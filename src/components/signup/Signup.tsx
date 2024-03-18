@@ -9,17 +9,16 @@ import { successMessageSelector } from "../../store/singnUp/signup-selector";
 import { useNavigate } from "react-router-dom";
 import { Validators } from "../../helpers/Validators";
 
-const {
-  isValidEmail,
-  isValidPhoneNumber,
-} = Validators;
+const { isValidEmail, isValidPhoneNumber } = Validators;
 
 export const SingnUp: FC = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const users = useSelector(usersSelector);
-  const successMessage = useSelector(successMessageSelector);
+
+  const userEmail = loginProvider.getUserId();
+  const currentUser = users?.find((user) => user?.email === userEmail);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -27,9 +26,11 @@ export const SingnUp: FC = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [checked, setChecked] = useState(false);
 
-  const userEmail = loginProvider.getUserId();
-  const currentUser = users?.find((user) => user?.email === userEmail);
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+  };
 
   const handleChange =
     (setState: any) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,24 +38,25 @@ export const SingnUp: FC = () => {
     };
 
   const handleSignup = () => {
-    if(isValidEmail(email) && isValidPhoneNumber(phone)){
-         const newUser = {
-      firstName,
-      lastName,
-      imageUrl,
-      email,
-      phone,
-      password,
-    };
-    dispatch(createUser(newUser));
-    navigate('/')
-    alert('success')   
-    }else{
-      alert('enter valid email and phone')
+    if (isValidEmail(email) && isValidPhoneNumber(phone)) {
+      const role = checked ? "superAdmin" : "admin";
+      const newUser = {
+        firstName,
+        lastName,
+        imageUrl,
+        email,
+        phone,
+        password,
+        role,
+      };
+      dispatch(createUser(newUser));
+      navigate("/");
+      alert("success");
+    } else {
+      alert("enter valid email and phone");
     }
- 
   };
-  
+
   return (
     <div className="sign_up">
       <h3>SIGN UP</h3>
@@ -63,7 +65,7 @@ export const SingnUp: FC = () => {
           onChange={handleChange(setFirstName)}
           className="signup_input"
           placeholder="First Name"
-          value={currentUser?.firstName || firstName}
+          value={firstName}
         />
         <input
           onChange={handleChange(setLastName)}
@@ -95,6 +97,16 @@ export const SingnUp: FC = () => {
           placeholder="Password"
           value={password}
         />
+
+        <div className="admin_checkbox">
+          <label>Super-Admin</label>
+          <input
+            className="checkbox"
+            type="checkbox"
+            checked={checked}
+            onChange={handleCheckboxChange}
+          />
+        </div>
       </div>
       <button onClick={handleSignup} className="signup_button">
         Sign Up

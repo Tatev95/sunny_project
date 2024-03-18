@@ -98,14 +98,13 @@ export const Cart: FC = () => {
                 </select>
                 <p>Total: {totalAmount}</p>
                 <div>
-                <CiCircleRemove
-                  onClick={() => handleRemoveProduct(product.id)}
-                />
-                <button onClick={() => handleOpenCheckout(product.id)}>
-                  Checkout
-                </button>
+                  <CiCircleRemove
+                    onClick={() => handleRemoveProduct(product.id)}
+                  />
+                  <button onClick={() => handleOpenCheckout(product.id)}>
+                    Checkout
+                  </button>
                 </div>
-       
               </div>
             );
           })

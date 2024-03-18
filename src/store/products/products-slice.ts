@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import { ProductsType, UserType } from "../../types";
-import { getProducts } from "../../services/requests/products/request";
+import {
+  addProduct,
+  getProducts,
+} from "../../services/requests/products/request";
 
 type productsState = {
   producst: ProductsType[];
@@ -9,7 +12,7 @@ type productsState = {
   currentProduct: {} | null;
   productId: string | null;
   searchText: string;
-  count: number
+  count: number;
 };
 
 const initialState: productsState = {
@@ -17,8 +20,8 @@ const initialState: productsState = {
   isLoading: false,
   currentProduct: {},
   productId: "",
-  searchText: '',
-  count: 0
+  searchText: "",
+  count: 0,
 };
 
 const producstSlice = createSlice({
@@ -49,9 +52,20 @@ const producstSlice = createSlice({
     builder.addCase(getProducts.rejected, (state) => {
       state.isLoading = true;
     });
+    builder.addCase(addProduct.pending, (state) => {
+      state.isLoading = true;
+    });
+    builder.addCase(addProduct.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.producst = action.payload;
+    });
+    builder.addCase(addProduct.rejected, (state) => {
+      state.isLoading = true;
+    });
   },
 });
 
-export const { setId, setProducts, setSearchValue,setCount } = producstSlice.actions;
+export const { setId, setProducts, setSearchValue, setCount } =
+  producstSlice.actions;
 
 export default producstSlice.reducer;

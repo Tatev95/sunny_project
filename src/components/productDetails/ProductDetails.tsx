@@ -26,7 +26,6 @@ export const ProductDetails: FC<ProductDetailsProps> = ({
   const userId = loginProvider.getUserId() + "";
   const count = useSelector(productCountSelector);
 
-
   const currentProduct = products?.find(
     (product: any) => product.id === productId
   );
@@ -38,10 +37,10 @@ export const ProductDetails: FC<ProductDetailsProps> = ({
 
   const handleAddToCart = () => {
     if (currentProduct) {
-      dispatch(addToCart({...currentProduct, userId}));
+      dispatch(addToCart({ ...currentProduct, userId }));
       handleCloseDetails();
       alert("Product was added to the CART");
-      window.location.reload()
+      window.location.reload();
     }
   };
 
